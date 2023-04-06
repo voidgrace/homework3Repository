@@ -1,17 +1,18 @@
 #include <stdio.h>
+//ê°€ì¥í° ìë£Œí˜•ì¸ intì˜ í¬ê¸° 4byteë¥¼ ê¸°ì¤€ìœ¼ë¡œ í• ë‹¹
 struct student {
-    char lastName[13]; /* 13 bytes */
-    int studentId; /* 4 bytes */  //°¡ÀåÅ« ÀÚ·áÇüÀÎ intÀÇ Å©±â 4byte¸¦ ±âÁØÀ¸·Î ÇÒ´ç
-    short grade; /* 2 bytes */      
+    char lastName[13]; /* 13 bytes */   //ì´ë¦„
+    int studentId; /* 4 bytes */        //í•™ë²ˆ
+    short grade; /* 2 bytes */          //í•™ë…„
     };
 int main()
 {
-    printf("[-----[°­ÀºÇı][2022041047]-----]\n");
+    printf("[-----[ê°•ì€í˜œ][2022041047]-----]\n");
     struct student pst;
     
-    printf("size of student = %ld\n", sizeof(struct student));  // padding: 19byte°¡ ¾Æ´Ñ ¹è¼ö°¡ µÇ´Â 16+4+4=24byte·Î ÇÒ´ç
+    printf("size of student = %ld\n", sizeof(struct student));  // padding: 19byteê°€ ì•„ë‹Œ ë°°ìˆ˜ê°€ ë˜ëŠ” 16+4+4=24byteë¡œ í• ë‹¹
 
     printf("size of int = %ld\n", sizeof(int));                 
-    printf("size of short = %ld\n", sizeof(short));             //paddingµÇÁö ¾ÊÀº ÀÚ·áÇüÀÇ ¿ø·¡ Å©±â 
+    printf("size of short = %ld\n", sizeof(short));             //paddingë˜ì§€ ì•Šì€ ìë£Œí˜•ì˜ ì›ë˜ í¬ê¸° (intì™€ short)
     return 0;
 }
