@@ -1,40 +1,40 @@
-#include <stdio.h>//Ç¥ÁØÀÔÃâ·Â ¶óÀÌºê·¯¸®
-#include <string.h>//not workingÀÌ½´¸¦ ÇØ°áÇÏ±â À§ÇÑ strcmpÇÔ¼ö¸¦ ¾²±âÀ§ÇÑ ¶óÀÌºê·¯¸®
+#include <stdio.h>//í‘œì¤€ì…ì¶œë ¥ ë¼ì´ë¸ŒëŸ¬ë¦¬
+#include <string.h>//not workingì´ìŠˆë¥¼ í•´ê²°í•˜ê¸° ìœ„í•œ strcmpí•¨ìˆ˜ë¥¼ ì“°ê¸°ìœ„í•œ ë¼ì´ë¸ŒëŸ¬ë¦¬
 struct student1 {
     char lastName;
     int studentId;
     char grade;
-};                      //ÀÏ¹İÀûÀÎ ±¸Á¶Ã¼
+};                      //ì¼ë°˜ì ì¸ êµ¬ì¡°ì²´
 typedef struct {
     char lastName;
     int studentId;
     char grade;
-} student2;             //»ç¿ëÀÚÁ¤ÀÇÀÚ·áÇüÀ» ÅëÇØ °£ÆíÇÑ ±¸Á¶Ã¼ ¼±¾ğ °¡´É
+} student2;             //ì‚¬ìš©ìì •ì˜ìë£Œí˜•ì„ í†µí•´ ê°„í¸í•œ êµ¬ì¡°ì²´ ì„ ì–¸ ê°€ëŠ¥
 
 int main() {
-    printf("[-----[°­ÀºÇı][2022041047]-----]\n");
+    printf("[-----[ê°•ì€í˜œ][2022041047]-----]\n");
 
-    struct student1 st1 = {'A', 100, 'A'};      //ÀÏ¹İÀû ±¸Á¶Ã¼ ¼±¾ğ ¹× ÃÊ±âÈ­ 
-    printf("st1.lastName = %c\n", st1.lastName);
-    printf("st1.studentId = %d\n", st1.studentId);
-    printf("st1.grade = %c\n", st1.grade);
+    struct student1 st1 = {'A', 100, 'A'};          //êµ¬ì¡°ì²´ ì„ ì–¸ ë° ì´ˆê¸°í™” 
+    printf("st1.lastName = %c\n", st1.lastName);    //ì´ë¦„
+    printf("st1.studentId = %d\n", st1.studentId);  //í•™ë²ˆ
+    printf("st1.grade = %c\n", st1.grade);          //í•™ë…„
 
-    student2 st2 = {'B', 200, 'B'};            //typedef·Î ±¸Á¶Ã¼ ¼±¾ğ ¹× ÃÊ±âÈ­
-    printf("\nst2.lastName = %c\n", st2.lastName);
-    printf("st2.studentId = %d\n", st2.studentId);
-    printf("st2.grade = %c\n", st2.grade);
+    student2 st2 = {'B', 200, 'B'};                 //typedefë¡œ êµ¬ì¡°ì²´ ì„ ì–¸ ë° ì´ˆê¸°í™”
+    printf("\nst2.lastName = %c\n", st2.lastName);  //ì´ë¦„
+    printf("st2.studentId = %d\n", st2.studentId);  //í•™ë²ˆ
+    printf("st2.grade = %c\n", st2.grade);          //í•™ë…„
 
     student2 st3;               
-    st3 = st2;      //´ëÀÔ ¿¬»êÀÚ¸¦ ÅëÇØ st3¿¡ st2À» º¹»ç
-    printf("\nst3.lastName = %c\n", st3.lastName);
-    printf("st3.studentId = %d\n", st3.studentId);
-    printf("st3.grade = %c\n", st3.grade);
+    st3 = st2;                                      //ëŒ€ì… ì—°ì‚°ìë¥¼ í†µí•´ st3ì— st2ì„ ë³µì‚¬
+    printf("\nst3.lastName = %c\n", st3.lastName);  //ì´ë¦„
+    printf("st3.studentId = %d\n", st3.studentId);  //í•™ë²ˆ
+    printf("st3.grade = %c\n", st3.grade);          //í•™ë…„
 
     /* equality test */
-    if((st3.lastName==st2.lastName)&&(st3.studentId==st2.studentId)&&(st3.grade==st2.grade)) // not working! ±¸Á¶Ã¼¸¦ ÅëÂ°·Î ºñ±³ ºÒ°¡, ±¸Á¶Ã¼¼Ó µ¥ÀÌÅÍ ÀÏÀÏÀÌ ´ëÁ¶
-        printf("equal\n");
+    if((st3.lastName==st2.lastName)&&(st3.studentId==st2.studentId)&&(st3.grade==st2.grade)) // not working! êµ¬ì¡°ì²´ë¥¼ í†µì§¸ë¡œ ë¹„êµ ë¶ˆê°€, êµ¬ì¡°ì²´ì† ë©¤ë²„ë³€ìˆ˜ ì¼ì¼ì´ ëŒ€ì¡°
+        printf("equal\n");//ê°™ìœ¼ë©´ equal ì¶œë ¥
     else
-        printf("not equal\n");
+        printf("not equal\n");//ë‹¤ë¥´ë©´ not equal ì¶œ
     return 0;
 
 }
