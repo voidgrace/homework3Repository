@@ -2,10 +2,10 @@
 #include<stdlib.h>
 void main()
 {
-int **x;//ÀÌÁßÆ÷ÀÎÅÍ º¯¼ö ¼±¾ð
-    printf("[-----[°­ÀºÇý][2022041047]-----]\n");
+int **x;//ì´ì¤‘í¬ì¸í„° ë³€ìˆ˜ ì„ ì–¸
+    printf("[-----[ê°•ì€í˜œ][2022041047]-----]\n");
 
-    printf("sizeof(x) = %lu\n", sizeof(x));     //ÀÌÁßÆ÷ÀÎÅÍ º¯¼öÀÇ Å©±â : 4B
-    printf("sizeof(*x) = %lu\n", sizeof(*x));   //ÀÌÁßÆ÷ÀÎÅÍ°¡ °¡¸®Å°´Â Æ÷ÀÎÅÍº¯¼öÀÇ Å©±â : 4B
-    printf("sizeof(**x) = %lu\n", sizeof(**x)); //ÀÌÁßÆ÷ÀÎÅÍ°¡ °¡¸®Å°´Â Æ÷ÀÎÅÍº¯¼ö°¡ °¡¸®Å°´Â º¯¼öÀÇ Å©±â : 4B
+    printf("sizeof(x) = %lu\n", sizeof(x));     //ì´ì¤‘í¬ì¸í„° ë³€ìˆ˜ì˜ í¬ê¸° : 4B(=ì£¼ì†Œê°€ 4B)
+    printf("sizeof(*x) = %lu\n", sizeof(*x));   //ì´ì¤‘í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°ë³€ìˆ˜ì˜ í¬ê¸° : 4B(=ì£¼ì†Œê°€ 4B)
+    printf("sizeof(**x) = %lu\n", sizeof(**x)); //ì´ì¤‘í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°ë³€ìˆ˜ê°€ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜ì˜ í¬ê¸° : 4B
 }
